@@ -10,6 +10,7 @@ import { PolicyWidget } from './PolicyWidget';
 import { PeopleWidget } from './PeopleWidget';
 import { LearningWidget } from './LearningWidget';
 import { ChatPanel } from '@/components/panels/ChatPanel';
+import { PeoplePanel } from '@/components/panels/PeoplePanel';
 import { Button } from '@/components/ui/button';
 import { MessageSquare } from 'lucide-react';
 
@@ -25,6 +26,7 @@ export function DashboardContent({ roleId }: DashboardContentProps) {
   const [completedTaskIds] = useState<string[]>([]);
   const [completedCourseIds] = useState<string[]>([]);
   const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isPeoplePanelOpen, setIsPeoplePanelOpen] = useState(false);
 
   if (!employee || !role) {
     return (
@@ -62,7 +64,10 @@ export function DashboardContent({ roleId }: DashboardContentProps) {
           <PolicyWidget roleId={roleId} />
 
           {/* People Recommendations Widget */}
-          <PeopleWidget roleId={roleId} />
+          <PeopleWidget 
+            roleId={roleId} 
+            onOpenPeoplePanel={() => setIsPeoplePanelOpen(true)}
+          />
 
           {/* Learning Path Widget */}
           <LearningWidget roleId={roleId} completedCourseIds={completedCourseIds} />
@@ -82,6 +87,13 @@ export function DashboardContent({ roleId }: DashboardContentProps) {
       <ChatPanel
         isOpen={isChatOpen}
         onClose={() => setIsChatOpen(false)}
+        roleId={roleId}
+      />
+
+      {/* People Panel */}
+      <PeoplePanel
+        isOpen={isPeoplePanelOpen}
+        onClose={() => setIsPeoplePanelOpen(false)}
         roleId={roleId}
       />
     </div>

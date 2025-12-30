@@ -1,13 +1,15 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { getHighPriorityPeople } from '@/lib/data-access/peopleService';
 import { User, ChevronRight } from 'lucide-react';
 
 interface PeopleWidgetProps {
   roleId: string;
+  onOpenPeoplePanel?: () => void;
 }
 
-export function PeopleWidget({ roleId }: PeopleWidgetProps) {
+export function PeopleWidget({ roleId, onOpenPeoplePanel }: PeopleWidgetProps) {
   const highPriorityPeople = getHighPriorityPeople(roleId, 4);
 
   const getRelationshipColor = (relationship: string) => {
@@ -37,6 +39,7 @@ export function PeopleWidget({ roleId }: PeopleWidgetProps) {
             <div
               key={rec.person.id}
               className="flex items-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group cursor-pointer"
+              onClick={onOpenPeoplePanel}
             >
               <div className="flex-shrink-0">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center text-white font-medium">
@@ -60,10 +63,14 @@ export function PeopleWidget({ roleId }: PeopleWidgetProps) {
           ))}
         </div>
 
-        <button className="w-full mt-4 text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center gap-1">
+        <Button 
+          variant="ghost"
+          className="w-full mt-4 text-sm text-blue-600 hover:text-blue-700 font-medium flex items-center justify-center gap-1"
+          onClick={onOpenPeoplePanel}
+        >
           View all recommendations
           <ChevronRight className="h-4 w-4" />
-        </button>
+        </Button>
       </CardContent>
     </Card>
   );
