@@ -22,7 +22,7 @@ export function ChecklistWidget({ roleId, completedTaskIds }: ChecklistWidgetPro
         <div className="flex items-center justify-between">
           <div>
             <CardTitle>Your Checklist</CardTitle>
-            <CardDescription>Week 1 priorities</CardDescription>
+            <CardDescription>Essential tasks for your first week</CardDescription>
           </div>
           <Badge variant="secondary">
             {completedTaskIds.length}/{currentTasks.length}

@@ -148,10 +148,10 @@ export function TokenUsageDisplay({ roleId }: TokenUsageDisplayProps) {
           <span className="text-xs font-semibold text-blue-900">Why This Matters</span>
         </div>
         <ul className="text-xs text-blue-800 space-y-1">
-          <li>✓ Faster response times (less context to process)</li>
-          <li>✓ Lower API costs (fewer tokens per request)</li>
-          <li>✓ Better focus (only relevant context loaded)</li>
-          <li>✓ Scales to 100+ roles without context bloat</li>
+          <li>✓ <strong>Faster responses:</strong> Less context means quicker processing</li>
+          <li>✓ <strong>Lower costs:</strong> Pay for only what you use, when you use it</li>
+          <li>✓ <strong>Better focus:</strong> Models work with relevant context only</li>
+          <li>✓ <strong>Infinite scale:</strong> Support 100+ roles without context bloat</li>
         </ul>
       </div>
     </div>

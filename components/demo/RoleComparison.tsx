@@ -166,7 +166,7 @@ export function RoleComparison({ isOpen, onClose, currentRoleId }: RoleCompariso
           {/* Comparison Table */}
           <div className="mt-8">
             <h3 className="text-lg font-bold text-gray-900 mb-4">
-              What Changes Between Roles
+              How Agent Skills Personalize Each Role
             </h3>
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 border border-blue-200 rounded-lg p-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -174,13 +174,13 @@ export function RoleComparison({ isOpen, onClose, currentRoleId }: RoleCompariso
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-2 h-2 bg-blue-600 rounded-full" />
                     <span className="text-sm font-semibold text-gray-900">
-                      Skills Architecture
+                      Intelligent Architecture
                     </span>
                   </div>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• Different Skill file loaded per role</li>
-                    <li>• Role-specific workflows and guidance</li>
-                    <li>• Unique onboarding timeline</li>
+                    <li>• Unique Skill file per role with specialized workflows</li>
+                    <li>• Role-specific guidance and best practices</li>
+                    <li>• Customized onboarding timeline and milestones</li>
                   </ul>
                 </div>
 
@@ -192,9 +192,9 @@ export function RoleComparison({ isOpen, onClose, currentRoleId }: RoleCompariso
                     </span>
                   </div>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• Different tasks and checklists</li>
-                    <li>• Role-specific learning paths</li>
-                    <li>• Tailored people recommendations</li>
+                    <li>• Relevant tasks and checklists for your function</li>
+                    <li>• Curated learning paths matching your role</li>
+                    <li>• Strategic people recommendations by priority</li>
                   </ul>
                 </div>
 
@@ -202,13 +202,13 @@ export function RoleComparison({ isOpen, onClose, currentRoleId }: RoleCompariso
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-2 h-2 bg-green-600 rounded-full" />
                     <span className="text-sm font-semibold text-gray-900">
-                      Policy Access
+                      Contextual Guidance
                     </span>
                   </div>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• Relevant policies surfaced first</li>
-                    <li>• Role-aware policy Q&A</li>
-                    <li>• Context-specific guidance</li>
+                    <li>• Most relevant policies surfaced automatically</li>
+                    <li>• Role-aware policy Q&A with smart citations</li>
+                    <li>• Context-specific answers to your questions</li>
                   </ul>
                 </div>
 
@@ -216,13 +216,13 @@ export function RoleComparison({ isOpen, onClose, currentRoleId }: RoleCompariso
                   <div className="flex items-center gap-2 mb-3">
                     <div className="w-2 h-2 bg-orange-600 rounded-full" />
                     <span className="text-sm font-semibold text-gray-900">
-                      Team Context
+                      Team Integration
                     </span>
                   </div>
                   <ul className="text-sm text-gray-700 space-y-2">
-                    <li>• Different team structures</li>
-                    <li>• Role-appropriate stakeholders</li>
-                    <li>• Specialized tools and resources</li>
+                    <li>• Org structure mapped to your team</li>
+                    <li>• Key stakeholders identified by function</li>
+                    <li>• Role-appropriate tools and resources</li>
                   </ul>
                 </div>
               </div>

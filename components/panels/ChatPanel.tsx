@@ -19,7 +19,7 @@ export function ChatPanel({ isOpen, onClose, roleId }: ChatPanelProps) {
     {
       id: '1',
       role: 'assistant',
-      content: "Hi! I'm your AI onboarding assistant. I can help you with questions about Airbnb policies, benefits, and your onboarding process. What would you like to know?",
+      content: "Hi! I'm your AI onboarding assistant, here to help you navigate Airbnb's policies, benefits, and your personalized onboarding journey. Ask me anything—I'm here to make your first weeks smooth and successful!",
       timestamp: new Date(),
     },
   ]);

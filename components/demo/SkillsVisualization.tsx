@@ -121,10 +121,10 @@ export function SkillsVisualization({ roleId }: SkillsVisualizationProps) {
           {totalTokens.toLocaleString()}
         </div>
         <div className="text-xs text-gray-600">
-          vs. ~35,000 tokens in traditional approach
+          vs. ~35,000 tokens with traditional monolithic prompts
         </div>
         <div className="mt-2 text-xs font-semibold text-green-700">
-          ✓ 82% token reduction with progressive disclosure
+          ✓ 93% reduction in context usage through intelligent architecture
         </div>
       </div>
 
@@ -134,10 +134,10 @@ export function SkillsVisualization({ roleId }: SkillsVisualizationProps) {
           How Progressive Disclosure Works:
         </div>
         <ul className="text-xs text-gray-600 space-y-1">
-          <li>• Level 1 loads immediately (100 tokens)</li>
-          <li>• Level 2 loads when role selected (2.5k tokens)</li>
-          <li>• Level 3 loads only when explicitly needed (0 tokens initially)</li>
-          <li>• Result: Fast, efficient, scalable architecture</li>
+          <li>• <strong>Level 1</strong> loads instantly—just 100 tokens for routing</li>
+          <li>• <strong>Level 2</strong> loads when you select a role—2.5k tokens of personalized guidance</li>
+          <li>• <strong>Level 3</strong> loads on-demand—only when you need specific resources</li>
+          <li>• <strong>Result:</strong> Lightning-fast, efficient, and infinitely scalable</li>
         </ul>
       </div>
     </div>

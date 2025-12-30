@@ -148,13 +148,13 @@ export function DataSourceIndicator({ roleId }: DataSourceIndicatorProps) {
       {/* How Skills Integrate */}
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
         <div className="text-xs font-semibold text-blue-900 mb-2">
-          How Skills Query Data:
+          How Agent Skills Query Data:
         </div>
         <ul className="text-xs text-blue-800 space-y-1">
-          <li>1. Skills identify what data is needed</li>
-          <li>2. Query only relevant systems (not all data)</li>
-          <li>3. Cache results to minimize API calls</li>
-          <li>4. Present personalized, role-aware information</li>
+          <li>1. Skills identify exactly what information is needed</li>
+          <li>2. Query only relevant systems—never fetch unnecessary data</li>
+          <li>3. Cache aggressively to minimize redundant API calls</li>
+          <li>4. Deliver personalized, role-aware insights instantly</li>
         </ul>
       </div>
 
@@ -164,8 +164,9 @@ export function DataSourceIndicator({ roleId }: DataSourceIndicatorProps) {
           📝 Demo Note
         </div>
         <p className="text-xs text-yellow-800">
-          This demo uses mock data files. In production, Skills would query real APIs 
-          (Workday, Greenhouse, Confluence, etc.) with proper authentication and caching.
+          This demo uses static JSON files to simulate real-time data. In production, 
+          Skills would query live APIs (Workday, Greenhouse, Confluence, etc.) with 
+          proper authentication, caching, and error handling.
         </p>
       </div>
     </div>
