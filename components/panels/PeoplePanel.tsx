@@ -17,7 +17,7 @@ interface PeoplePanelProps {
 
 export function PeoplePanel({ isOpen, onClose, roleId }: PeoplePanelProps) {
   const [filterRelationship, setFilterRelationship] = useState<Relationship | 'all'>('all');
-  
+
   const allPeople = getRecommendedPeople(roleId);
 
   // Filter by relationship

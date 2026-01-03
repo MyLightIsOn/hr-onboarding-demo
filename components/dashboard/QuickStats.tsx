@@ -1,12 +1,12 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { 
-  getTasksByRole, 
-  calculateProgress, 
-  areRequiredTasksComplete 
+import {
+  getTasksByRole,
+  calculateProgress,
+  areRequiredTasksComplete
 } from '@/lib/data-access/taskService';
-import { 
+import {
   getRequiredCourses,
-  calculateLearningProgress 
+  calculateLearningProgress
 } from '@/lib/data-access/learningService';
 import { getRecommendedPeople } from '@/lib/data-access/peopleService';
 import { CheckCircle2, GraduationCap, Users, TrendingUp } from 'lucide-react';
@@ -18,18 +18,17 @@ interface QuickStatsProps {
 }
 
 export function QuickStats({ roleId, completedTaskIds, completedCourseIds }: QuickStatsProps) {
-  const allTasks = getTasksByRole(roleId);
-  const taskProgress = calculateProgress(allTasks, completedTaskIds);
-  
+  const taskProgress = calculateProgress(roleId, completedTaskIds);
+
   const requiredCourses = getRequiredCourses(roleId);
   const learningProgress = calculateLearningProgress(roleId, completedCourseIds);
-  
+
   const recommendedPeople = getRecommendedPeople(roleId);
-  
+
   // Calculate overall progress (weighted average)
   const overallProgress = Math.round(
-    (taskProgress.percentage * 0.4) + 
-    (learningProgress.percentage * 0.4) + 
+    (taskProgress.percentage * 0.4) +
+    (learningProgress.percentage * 0.4) +
     ((recommendedPeople.length > 0 ? 20 : 0) * 0.2)
   );
 
@@ -77,7 +76,7 @@ export function QuickStats({ roleId, completedTaskIds, completedCourseIds }: Qui
       {stats.map((stat) => {
         const Icon = stat.icon;
         return (
-          <Card 
+          <Card
             key={stat.label}
             className="transition-all duration-300 hover:shadow-lg hover:-translate-y-1 animate-in slide-in-from-bottom duration-500"
             style={{ animationDelay: `${stat.delay}ms` }}
