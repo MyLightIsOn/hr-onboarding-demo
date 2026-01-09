@@ -2,7 +2,7 @@
 
 > **An intelligent onboarding system powered by Anthropic's Agent Skills architecture**
 
-A demonstration project showcasing how Agent Skills can create personalized, scalable employee onboarding experiences. Built for the Airbnb Staff AI Innovation Engineer role application.
+A demonstration project showcasing how Agent Skills can create personalized, scalable employee onboarding experiences.
 
 ![Demo Status](https://img.shields.io/badge/status-demo-blue)
 ![Next.js](https://img.shields.io/badge/Next.js-15-black)
